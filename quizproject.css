@@ -1,0 +1,272 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:white;
+  margin:0;
+}
+
+h1{
+font-size:5vh;
+padding-left:2vw;
+font-family: 'Abel', sans-serif;
+}
+
+/* Style the header */
+
+
+/* The grid container */
+.grid-container {
+height:75vh;
+  display: grid;
+  grid-template-areas: 
+      'header' 
+      'left' 
+      'right' 
+      'footer1'
+	  'footer2';
+  background-size:12vw;
+  background-position: 0px 0px;
+  animation: animatedBackground 40000s linear infinite ;
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 300000vh 300000vh;
+  }
+}
+
+#start{
+	background-image: url("quizImages/jojo2.png");
+	animation: animatedBackground 40000s linear infinite ;
+}
+
+.header {
+  background-color: darkorange;
+  width:100vw;
+  float:left;
+  grid-area: header;
+  padding-top: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+  
+#timer{
+padding-left:-10vw;
+width:100vw;
+align-items:center;
+margin: auto;
+float:left;
+height:6vh;
+background-color:red;	
+}
+
+.left,
+.right,
+.header,
+.footer1, footer2, #filler{
+  
+  display:grid;
+  justify-items:center;  
+  align-items:center;  
+}
+
+/* Style the left column */
+.left {
+	position:relative;
+  font-family: 'Abel', sans-serif;
+  grid-area: left;
+}
+
+#filler{
+	grid-area:filler;
+}
+
+/* Style the right column */
+.right {
+  grid-area: right;
+}
+
+/* Style the footer */
+.footer1 {
+  grid-area: footer1;
+  background-color: darkorange;
+  text-align: center;
+}
+
+.footer2 {
+  grid-area: footer2;
+  background-color: darkorange;
+  text-align: center;
+}
+
+
+#question {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight:bold;
+  font-size:7vw;
+
+}
+
+#cover {
+	position:absolute;
+	top:0;
+	left:0;
+	display:block;
+	width:100%;
+	height:100%;
+}
+
+#score{
+color:white;	
+margin-right:35vw;
+font-size:1vw;
+}	
+
+#demo{
+display:none;	
+}
+
+.options {
+   text-align:center;
+   border: 1px solid white;
+   font-size:1.5em;
+   padding:0.5em;
+   margin:1vw;
+   background-color:black;
+}
+
+.options:hover {
+	background-color: orange !important;
+	transition: all 0.5s ease-in !important;
+}
+
+#lightbox {
+  z-index:10;
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,0.8);   
+}
+
+#message {
+    width:80%;
+    min-width:400px;
+    padding:20px;
+    background-color:orange;
+    color:white;
+    text-align:center;
+    font-size:4em;
+    font-weight:bold;
+    /* vertically and horizontally center the text */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#hint {
+	font-size:1.2vw;
+	text-align:center;
+	color:orange;
+	border:thin solid darkorange;
+	padding:10px;
+	width:15vw;
+}
+
+#hintButton {
+	border-radius:0.5vw;
+	border:thin solid #edb702;
+	height:40px;
+	width:100px;
+	padding:10px;
+	background-color:#ffc400;
+	color:white;
+}
+
+#restart{
+	height:40px;
+	width:100px;
+	padding:10px;
+	background-color:green;
+	color:white;
+}
+
+#text1{
+	font-size:3vw;
+	padding:2vh;
+	font-size:2.5vw;
+	margin-right:-6vw;
+	border-radius:0.4vw;
+	text-align:center;
+	width:25vw;
+	height:20vw;
+	padding-top:5vh;
+	padding-bottom:5vh;
+	background-color:#eb9f23;
+}
+
+#start{
+	z-index:10;
+    position:fixed;
+	width:100vw;
+	height:90vh;
+	background-color:rgba(0,0,0,0.95);   	
+}
+
+#starth1{
+color:white;
+text-align:center;
+font-size:5vw;
+}
+
+#starth2{
+color:white;
+text-align:center;
+font-size:3vw;
+}
+@media (max-width: 1600px) {
+
+#text1{
+	padding:2vh;
+	font-size:3vw;
+	margin-right:-3vw;
+	border-radius:0.4vw;
+	text-align:center;
+	width:45vw;
+	height:30vh;
+	padding-top:5vh;
+	padding-bottom:5vh;
+	background-color:#eb9f23;
+}
+  #hint {
+	width:15vh;
+	font-size:4vh;
+}
+
+}
+
+/* Desktop Version */
+@media (min-width: 768px) {
+	
+#question{
+font-size: 2em;	
+}
+
+ .grid-container  {
+  grid-template-areas: 
+    'header header header header' 
+    'left left filler right' 
+    'footer1 footer1 footer2 footer2';
+
+  
+  }
+  
+}

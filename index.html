@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JS Quiz Assignment</title>
+	<script src="quizproject.js"></script>
+	<link rel="stylesheet" type="text/css" href="quizproject.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Abel&family=Merriweather+Sans:wght@300&family=Nunito&display=swap" rel="stylesheet">
+    <!-- <link rel="manifest" href="manifest.json"> -->
+	
+	<link rel="icon" type="image/x-icon" href="quizimages/favicon.ico">
+  
+</head>
+<body>
+
+<div id="start" onclick="start()"> <h1 id="starth1">Price Guessing Quiz</h1><h2 id="starth2"> Are you ready? </h2><h2 id="starth2">[Click To Begin]</h2></div>
+
+<div id="lightbox" onclick="closeLightBox()">
+   <div id="message">This is the message</div>
+</div>
+
+<h1>Price Guessing Quiz</h1>
+
+<div class="grid-container" id="moving">
+  <div class="header">
+    <div id="question">The Question</div>
+	<div id="timer"></div>
+  </div>
+
+  <div class="left">
+    <div>
+     
+     <div class="options" id="a" onclick="markIt('a')">A.</div>
+	 <div class="options" id="b" onclick="markIt('b')">B.</div>
+     <div class="options" id="c" onclick="markIt('c')">C.</div>
+	 <div class="options" id="d" onclick="markIt('d')">D.</div>
+	 <div id="cover"></div>
+	</div>
+
+	<div id="hint">
+	Hint goes here
+	</div>
+  </div> 
+
+	<div id="filler"> 
+	
+	<div id="text1"></div>
+	</div>
+	
+  
+  <div class="right"> <img id="image" src="quizimages/q1.jpg" alt="image"></div>
+
+
+
+
+  <div class="footer1">
+    <p id="hintButton">Hint?</p>
+  </div>
+  
+  <div class="footer2">
+    <p id="score">Score</p>
+  </div>
+</div>
+<p id="demo"> adwdw</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
